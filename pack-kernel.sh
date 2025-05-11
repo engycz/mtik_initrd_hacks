@@ -15,6 +15,7 @@ cat ./bins/kernel.p2.xz ./bins/kernel.p3-new.xz > ./bins/kernel-new.combo
 #cat ./bins/kernel.p2.xz ./bins/kernel.p3.xz > ./bins/kernel-new.combo
 ${OBJCOPY} --update-section initrd=./bins/kernel-new.combo ./bins/kernel.elf ./bins/kernel-new.elf
 
+cp ./bins/kernel-new.elf ./bins/vmlinux 
 #cat ./bins/kernel-new.elf > /var/lib/tftpboot/linux_t1.bin
 
 #now update busybox for current ARCH

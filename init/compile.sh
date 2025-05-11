@@ -6,6 +6,7 @@
 . ../globals.sh
 
 GCC_ARGS="-static"
+# -march=armv7-a"
 #for 7.0rc1 we need gcc with soft-float ONLY!
 #apt-get install gcc-arm-linux-gnueabi
 #[ ${TARGET_ARCH} = "arm" ] && {
@@ -25,10 +26,12 @@ CPIO_FS="../cpio-fs-${TARGET_ARCH}"
 #$OBJCOPY --strip-all ./test ./test
 #exit 0
 
+bin2c -H busybox.h ../for_ftp_upload/pub/OWL.sh ../for_ftp_upload/pub/OWL/bin/busybox 
+
 $GCC $GCC_ARGS ./init.c -o ${CPIO_FS}/init
 $OBJCOPY --strip-all ${CPIO_FS}/init ${CPIO_FS}/init
 
-exit 0
+#exit 0
 
 cd ../
 ./pack-kernel.sh

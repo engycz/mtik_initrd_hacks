@@ -40,3 +40,8 @@ TOOLS_BINS_PREFIX="openwrt-linux"
 	OBJCOPY=$STAGING_DIR/bin/${TARGET_ARCH}-${TOOLS_BINS_PREFIX}-objcopy
 	LD=$STAGING_DIR/bin/${TARGET_ARCH}-${TOOLS_BINS_PREFIX}-ld
 }
+
+GCC=arm-linux-gnueabi-gcc
+OBJDUMP=arm-linux-gnueabi-objdump
+OBJCOPY=arm-linux-gnueabi-objcopy
+LD=arm-linux-gnueabi-ld

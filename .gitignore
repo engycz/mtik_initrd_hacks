@@ -1,4 +1,5 @@
 .*
+*~
 !.gitignore
 kernel.headers
 bins/*
@@ -6,5 +7,6 @@ finder/kernel-extractor
 finder/finder
 ros/*
 init/init.objdump
+init/busybox.h
 init/oldinit.objdump
 tmp/*
